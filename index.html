@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='todo' lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="todoCtrl">
+
+  <div class="container">
+    <h1>To Do List</h1>
+
+
+    <input type="text"  ng-model = "todoInput" placeholder="Enter a task">
+    <button ng-click= "addNew(todoInput)">Add</button>
+    <input type="text" ng-model = "search " placeholder="Search ">
+    <ul>
+      <li ng-repeat = "todo in todoArray | filter : search"> {{ todo }}</li>
+    </ul>
+
+  </div>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script type="text/javascript" src="script.js">
+
+  </script>
+  <!-- <script type="text/javascript" src="script.js"></script> -->
+</body>
+</html>
