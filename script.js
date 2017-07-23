@@ -5,7 +5,6 @@ app.controller('todoCtrl', function ($scope) {
 
 $scope.addNew = function (entry) {
 $scope.todoArray.push(entry);
-
-};
+  };
 
 });
